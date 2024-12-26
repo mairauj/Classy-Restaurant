@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="menu-location.css">
+    <link rel="icon" type="image/png" href="./Images/crown2.png">
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="sidebar">
+        <a href="#" class="brand"><i class="fa-regular fa-chess-king"></i>King'<span style="color: red;">s</span> Banquet </a>
+        <div class="menu-btn"></div>
+            <div class="navigation-items">
+                <a href="#"  onclick="closeSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="30px" fill="black" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+                <a href="index.html">Home</a>
+                <a href="about us.html">About</a>
+                <a href="location.html">Locations</a>
+                <a href="menu.html">Menu</a>
+                <a href="register.html">Reservation</a>
+               <button id="openCartBtn" onclick="openCart()">
+                <i class="fa-solid fa-cart-shopping "></i> <span id="cartCount" class="cart-count">0</span>  
+                </button>
+            </div>
+        </div>    
+    
+
+
+    
+    <a href="#" class="brand"><i class="fa-regular fa-chess-king"></i>King'<span style="color: red;">s</span> Banquet </a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+        <div class="navigation-items">
+            <a href="index.html" class="hideOnMobile">Home</a>
+            <a href="about us.html" class="hideOnMobile">About</a>
+            <a href="location.html" class="hideOnMobile">Locations</a>
+            <a href="menu.html" class="hideOnMobile">Menu</a>
+            <a href="reservation.html" class="hideOnMobile">Reservation</a>
+            <button id="openCartBtn" onclick="openCart()" class="hideOnMobile">
+                <i class="fa-solid fa-cart-shopping"></i><span id="cartCount" class="cart-count hideOnMobile">0</span>
+                 
+                 </button>
+            <a href="#" onclick="showSidebar()" class="menubtn"><svg xmlns="http://www.w3.org/2000/svg" height="26px" fill="white" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+        </div>
+    </div>
+</header>
+
+    
+    <div class="img-container">
+        
+        <img src="pexels-luiisrtz-802220-1693543.jpg">
+    
+</div>
+
+<h1>King's Banquet</h1>
+<span id="places">2 main street,Chicago, MA, 803, USA</span>
+<span id="hours">12:00 PM - 10:00 PM </span>
+
+
+<!-- Starters -->
+<div class="food-menu">
+    <h2>Starters</h2>
+    <div class="food-menu-container">
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Angry Shrimp</div>
+                    <div class="dish-desc">Spicy, flavorful shrimp prepared with a signature twist.</div>
+                    <div class="dish-price">$29.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Angry shrimp', 29.00, 'Food items/shrimp.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Food items/shrimp.jpeg">
+            </div>
+        </div>
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Crab Cake</div>
+                    <div class="dish-desc">Golden-brown crab cake with a rich, delicate seafood flavor.</div>
+                    <div class="dish-price">$30.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Crab cake', 30.00, 'Food items/crab cake.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Food items/crab cake.jpeg">
+            </div>
+        </div>
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Burrata</div>
+                    <div class="dish-desc">Creamy burrata cheese paired with fresh accompaniments.</div>
+                    <div class="dish-price">$19.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Burrata', 19.00, 'Food items/burrata.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Food items/burrata.jpeg">
+            </div>
+        </div>
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Grilled Bacon</div>
+                    <div class="dish-desc">Thick, smoky bacon grilled to perfection.</div>
+                    <div class="dish-price">$22.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Grilled Bacon', 22.00, 'Food items/grilled bacon.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Food items/grilled bacon.jpeg">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Side Cart -->
+<div id="sideCart" class="side-cart">
+    <div class="cart-header">
+        <h3>Shopping Cart</h3>
+        <button onclick="closeCart()">X</button>
+    </div>
+    <ul id="cartItems"></ul>
+    <p>Total: $<span id="totalAmount">0.00</span></p>
+    <a href="login.html"><button id="checkout">Proceed to checkout</button></a>
+</div>
+<!-- Soups & Salads -->
+<div class="food-menu-salad">
+    <h2>Soups & Salads</h2>
+    <div class="food-menu-container">
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Classic Split Pea Soup</div>
+                    <div class="dish-desc">Hearty and comforting split pea soup with a classic recipe.</div>
+                    <div class="dish-price">$10.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Classic Split Pea Soup', 10.00, 'Food items/pea soup.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Food items/pea soup.jpeg">
+            </div>
+        </div>
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Clam Chowder</div>
+                    <div class="dish-desc">Creamy, rich chowder with tender clams and a savory broth.</div>
+                    <div class="dish-price">$14.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Clam Chowder', 14.00, 'Food items/clam chowder.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Food items/clam chowder.jpeg">
+            </div>
+        </div>
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Royal Special Salad</div>
+                    <div class="dish-desc">Fresh, vibrant salad with a mix of premium greens.</div>
+                    <div class="dish-price">$16.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Royal Special Salad', 16.00, 'Images/item3.avif')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Images/item3.avif">
+            </div>
+        </div>
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Baby Ice-berg Salad</div>
+                    <div class="dish-desc">Crisp iceberg lettuce served with a classic dressing.</div>
+                    <div class="dish-price">$13.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Baby Ice-berg Salad', 13.00, 'Images/item4.avif')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Images/item4.avif">
+            </div>
+        </div>
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Greek Spinach Salad</div>
+                    <div class="dish-desc">Fresh spinach paired with Greek-inspired flavors and toppings.</div>
+                    <div class="dish-price">$19.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Greek Spinach Salad', 19.00, 'Food items/greenspinachsalad.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Food items/greenspinachsalad.jpg">
+            </div>
+        </div>
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Tomato & Onion Salad</div>
+                    <div class="dish-desc">Juicy tomatoes and onions drizzled with a light dressing.</div>
+                    <div class="dish-price">$16.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Tomato & Onion Salad', 16.00, 'Images/item8.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Images/item8.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Shellfish -->
+<div class="food-menu-shellfish">
+    <h2>Shellfish</h2>
+    <div class="food-menu-container">
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Jumbo Shrimp</div>
+                    <div class="dish-desc">Plump, chilled shrimp served with a signature sauce.</div>
+                    <div class="dish-price">$20.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Jumbo Shrimp', 20.00, 'Food items/shrimp special.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Food items/shrimp special.jpeg">
+            </div>
+        </div>
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Octopus Cocktail</div>
+                    <div class="dish-desc">Tender octopus in a refreshing, cocktail-style presentation.</div>
+                    <div class="dish-price">$24.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Octopus Cocktail', 24.00, 'Food items/octopus cocktail.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Food items/octopus cocktail.jpg">
+            </div>
+        </div>
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Chilled Maine Lobster Tail</div>
+                    <div class="dish-desc">Sweet, chilled lobster tail served with a hint of citrus.</div>
+                    <div class="dish-price">$26.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Chilled Maine Lobster Tail', 26.00, 'Food items/lobster trail.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Food items/lobster trail.jpeg">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Royal Wagyu -->
+<div class="food-menu-wagyu">
+    <h2>Royal Wagyu</h2>
+    <div class="food-menu-container">
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Wagyu Flat Iron</div>
+                    <div class="dish-desc">Premium Wagyu steak with a rich, buttery flavor.</div>
+                    <div class="dish-price">$80.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Wagyu Flat Iron', 80.00, 'Food items/wagyu.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Food items/wagyu.jpeg">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Desserts -->
+<div class="food-menu-desserts">
+    <h2>Desserts</h2>
+    <div class="food-menu-container">
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Gigantic Chocolate Cake</div>
+                    <div class="dish-desc">A rich, moist chocolate cake with a dense, fudgy texture.</div>
+                    <div class="dish-price">$15.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Gigantic Chocolate Cake', 15.00, 'Food items/chocolate cake.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Food items/chocolate cake.jpeg">
+            </div>
+        </div>
+
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">Coconut Creme Cake</div>
+                    <div class="dish-desc">A delicate, creamy cake infused with coconut flavors.</div>
+                    <div class="dish-price">$13.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('Coconut Creme Cake', 13.00, 'Food items/coconut creme cake.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Food items/coconut creme cake.jpeg">
+            </div>
+        </div>
+
+        <div class="dish-item">
+            <div class="dishes">
+                <div class="dish-1">
+                    <div class="dish-name">New-York Style Cheesecake</div>
+                    <div class="dish-desc">A classic New-York style cheesecake with a creamy texture.</div>
+                    <div class="dish-price">$18.00</div>
+                    <div class="product">
+                        <button onclick="addToCart('New-York Style Cheesecake', 18.00, 'Food items/plain-cheesecake-cappuccino.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+                <img id="dish-img" src="Food items/plain-cheesecake-cappuccino.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ORDER AND RESERVE -->
+
+<div class="reserve-order">
+    <div class="reserve-table">
+        <img src="Images/mf1.jpg">
+        <div class="reservation-box">
+            <div class="reservation-box-desc">
+                <h3 class="reservation-head">RESERVE A TABLE</h3>
+                <hr>
+        <p class="reservation-description">Bring the company (and your appetite), and we’ll bring the meat, fire, wine, and culinary craftsmanship that makes for an unforgettable meal.
+
+        </p>
+        <a href="#" class="reservation-link">RESERVE A TABLE</i>
+        </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="order-online">
+        <img src="Images/sardinia+food+13.jpeg">
+        <div class="order-box">
+
+            <div class="order-box-desc">
+                <h3 class="order-head">ORDER ONLINE</h3>
+                <hr>
+        <p class="order-description">Enjoy the classic King's Bamquet experience, delivered to your home. Let us take care of tonight’s dinner.
+
+        </p>
+        <a href="orderonline.html" class="order-link">ORDER ONLINE</i>
+        </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- footer -->
+
+<footer>
+    <div class="footer-container">
+        <div class="contact-info">
+            <h3>Contact Us</h3>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@kingsbanquet.com</p>
+            <p>Address: 123 Main St, City, State, ZIP</p>
+        </div>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservations</a>
+            <a href="about us.html">About Us</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 King's Banquet. All rights reserved.</p>
+       
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </div>
+</footer>
+
+<script>
+    let cart = [];
+let cartItems = document.getElementById('cartItems'); 
+let totalAmountElement = document.getElementById('totalAmount'); 
+let cartCountElement = document.getElementById('cartCount'); 
+
+// Add item to cart
+function addToCart(name, price, image) {
+  let item = cart.find(item => item.name === name);
+  
+  if (item) {
+    item.quantity += 1; 
+  } else {
+    cart.push({ name: name, price: price, quantity: 1, image: image }); 
+  }
+
+  updateCartDisplay(); 
+  updateCartCount(); 
+  openCart(); 
+}
+
+// Update cart display  
+function updateCartDisplay() {
+  cartItems.innerHTML = ''; 
+  let totalAmount = 0;
+
+  cart.forEach(item => {
+    
+    const listItem = document.createElement('li');
+    listItem.classList.add('cart-item'); 
+
+    
+    listItem.innerHTML = `
+  <div class="cart-item-details" style="display: flex; align-items: center; padding: 10px; margin-bottom: 10px; border-bottom: 1px solid #ddd; width: 100%;">
+    <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+    <div>
+      <span class="cart-item-name">${item.name}</span>
+      <span class="cart-item-price">$${item.price}</span>
+      <div class="cart-item-quantity" style="display: flex; align-items: center; gap: 10px;">
+        <button class="decrement" onclick="changeQuantity('${item.name}', -1)" 
+          style="border: none; background-color: #000; color: white; font-size: 16px; width: 20px; height: 20px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer;">
+          <span>-</span>
+        </button>
+        <span id="quantity-${item.name}">${item.quantity}</span>
+        <button class="increment" onclick="changeQuantity('${item.name}', 1)" 
+          style="border: none; background-color: #000; color: white; font-size: 16px; width: 20px; height: 20px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer;">
+          <span>+</span>
+        </button>
+      </div>
+    </div>
+  </div>
+`;
+
+
+    cartItems.appendChild(listItem); 
+    totalAmount += item.price * item.quantity; 
+  });
+
+  totalAmountElement.textContent = totalAmount.toFixed(2); 
+}
+
+
+function updateCartCount() {
+  let totalItems = cart.reduce((total, item) => total + item.quantity, 0); 
+  const cartCountElements = document.querySelectorAll('.cart-count');
+  cartCountElements.forEach(element => {
+    element.textContent = totalItems;
+
+  if (totalItems === 0) {
+    cartCountElement.style.display = 'none';
+  } else {
+    cartCountElement.style.display = 'block'; 
+  }
+});
+}
+
+
+function openCart() {
+  document.getElementById('sideCart').style.width = '300px'; 
+}
+
+
+function closeCart() {
+  document.getElementById('sideCart').style.width = '0'; 
+}
+
+
+function changeQuantity(name, change) {
+  let item = cart.find(item => item.name === name);
+  if (item) {
+    item.quantity += change;
+    if (item.quantity <= 0) {
+      cart = cart.filter(item => item.name !== name); 
+    }
+    updateCartDisplay();
+    updateCartCount();
+  }
+}
+
+
+
+function showSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'flex'
+}
+
+function closeSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'none'
+}
+</script>
+
+
+    
+</body>
+</html>
+
+

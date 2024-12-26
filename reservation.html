@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="./Images/crown2.png">
+
+    <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+    
+<header>
+    <div class="sidebar">
+        <a href="#" class="brand"><i class="fa-regular fa-chess-king"></i>King'<span style="color: red;">s</span> Banquet </a>
+        <div class="menu-btn"></div>
+        <div class="navigation-items">
+            <a href="#"  onclick="closeSidebar()"><svg xmlns="http://www.w3.org/2000/svg"  fill="white" height="30px" width="30px" viewBox="0 -960 960 960" width="12px" margin:0px  fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+            <a href="index.html">Home</a>
+            <a href="about us.html">About</a>
+            <a href="location.html">Locations</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservation</a>
+        </div>
+    </div>
+
+ 
+
+
+
+    <a href="#" class="brand"><i class="fa-regular fa-chess-king"></i>King'<span style="color: red;">s</span> Banquet </a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+        <div class="navigation-items">
+            <a href="index.html" class="hideOnMobile">Home</a>
+            <a href="about us.html" class="hideOnMobile">About</a>
+            <a href="location.html" class="hideOnMobile">Locations</a>
+            <a href="menu.html" class="hideOnMobile">Menu</a>
+            <a href="reservation.html" id="reservea" class="hideOnMobile"><button  id="openReservationForm" class="reserve">Reservation</button></a>
+            <a href="#" onclick="showSidebar()" class="menubtn"><svg xmlns="http://www.w3.org/2000/svg" height="26px" fill="white" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+        </div>
+    </div>
+</header>
+
+
+<div class="wrapper">
+<div class="reservation-container">
+    <form id="reservationForm">
+        <div class="head">Reservation at King's Banquet</div>
+        <!-- Step 1 -->
+        <div class="step-section active" id="step1">
+            <h2>1.Find a Table</h2>
+            <div class="inline-inputs">
+                <div class="input-group">
+                    <label for="people">People</label>
+                    <select id="people" required>
+                        <option value="" disabled>Select</option>
+                        <option value="2" selected>2</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                    </select>
+                    
+                </div>
+                <div class="input-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="input-group">
+                    <label for="time">Time</label>
+                    <select id="time" required>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="11:30">11:30 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="12:30">12:30 PM</option>
+                        <option value="13:00">1:00 PM</option>
+                        <option value="13:30">1:30 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="14:30">2:30 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="15:30">3:30 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="16:30">4:30 PM</option>
+                        <option value="17:00">5:00 PM</option>
+                        <option value="17:30">5:30 PM</option>
+                        <option value="18:00">6:00 PM</option>
+                        <option value="18:30">6:30 PM</option>
+                        <option value="19:00">7:00 PM</option>
+                        <option value="19:30">7:30 PM</option>
+                        <option value="20:00">8:00 PM</option>
+                        <option value="20:30">8:30 PM</option>
+                        <option value="21:00">9:00 PM</option>
+                        <option value="21:30">9:30 PM</option>
+                        <option value="22:00">10:00 PM</option>
+                        <option value="22:30">10:30 PM</option>
+                        <option value="23:00">11:00 PM</option>
+                        <option value="23:30">11:30 PM</option>
+                    </select>
+                </div>
+                
+                
+            </div>
+            <div class="action-buttons">
+                <button type="button" id="nextStep">Find Table</button>
+            </div>
+            <p>
+                Powered by [BIT] – This is a design prototype to showcase a reservation form. 
+            </p>
+            
+        </div>
+
+
+        <!-- Step 2 -->
+        
+        <div class="step-section" id="step2">
+            <button type="button" class="previous" id="prevStep">Back</button>
+            <div class="wrapper2">
+                    
+                <div class="form detail">
+                    <h2>Step 2: Your Details</h2>
+                    <div class="input-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="occasion">Select a Special Occasion</label>
+                        <select id="occasion">
+                            <option value="">None</option>
+                            <option value="Birthday">Birthday</option>
+                            <option value="Anniversary">Anniversary</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="specialRequest">Special Request</label>
+                        <textarea id="specialRequest" rows="3"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="textUpdates">
+                        <label for="textUpdates">Yes, I want to get text updates and reminders about my reservations.</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="checkbox" id="emailOffers">
+                        <label for="emailOffers">Sign me up to receive dining offers and news from this restaurant by email.</label>
+                    </div>
+                   
+                
+                </div>
+                
+       
+            
+
+            
+                <div id="summary" class="summary">
+                    <p id="location"></p>
+                    <p id="summaryDetails">Please select your reservation details.</p>
+            
+
+
+                    <hr>
+                    <div class="info">
+                        <div class="info-1">
+                            What to know before you go
+                        </div>
+                        <div class="info-1-desc">
+                            We have a 15 minute grace period. Please
+                            call us if you are running later than 15
+                            minutes after your reservation time.
+                        </div>
+
+                        <div class="info-1">
+                            A note from the restaurant
+                        </div>
+
+                        <div class="info-1-desc">
+                            Thank you for your reservation, we can't
+                            wait to see you!For special or
+                            last-minute circumstances, please call us
+                            at 999-777-0000. Thank you!
+                        </div>
+                    </div>
+
+                </div>
+
+            
+            </div>
+            <div class="action-buttons">
+                        
+                <button type="submit" class="confirm-button">Confirm Reservation</button>
+            </div>
+        </div>
+
+    
+    </form>
+    
+    
+</div>
+
+</div>
+
+   
+<!-- footer -->
+
+<footer>
+    <div class="footer-container">
+        <div class="contact-info">
+            <h3>Contact Us</h3>
+            <p class="footer-contact">Phone: (123) 456-7890</p>
+            <p class="footer-contact">Email: info@kingsbanquet.com</p>
+            <p class="footer-contact">Address: 123 Main St, City, State, ZIP</p>
+        </div>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservations</a>
+            <a href="about us.html">About Us</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p id="rights">© 2024 King's Banquet. All rights reserved.</p>
+       
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </div>
+</footer>
+
+
+
+
+
+
+<script>
+    const step1 = document.getElementById('step1');
+    const step2 = document.getElementById('step2');
+    const nextStep = document.getElementById('nextStep');
+    const prevStep = document.getElementById('prevStep');
+
+    nextStep.addEventListener('click', () => {
+        if (document.getElementById('people').value && document.getElementById('date').value && document.getElementById('time').value) {
+            step1.classList.remove('active');
+            step2.classList.add('active');
+        } else {
+            alert('Please fill all fields in Step 1');
+        }
+    });
+
+    prevStep.addEventListener('click', () => {
+        step2.classList.remove('active');
+        step1.classList.add('active');
+    });
+
+    document.getElementById('reservationForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Reservation Confirmed!');
+        document.getElementById('reservationForm').reset();
+        step2.classList.remove('active');
+        step1.classList.add('active');
+    });
+
+
+    const peopleInput = document.getElementById('people');
+    const dateInput = document.getElementById('date');
+    const timeInput = document.getElementById('time');
+    const summaryDetails = document.getElementById('summaryDetails');
+
+    function updateSummary() {
+        const people = peopleInput.value;
+        const date = dateInput.value ? new Date(dateInput.value).toLocaleDateString() : 'Invalid date';
+        const time = timeInput.value ? timeInput.options[timeInput.selectedIndex].text : 'Invalid time';
+
+        summaryDetails.innerHTML = `${people} People <br> Date: ${date} <br> Time: ${time}`;
+        summaryDetails.style.textAlign = "left"; 
+    }
+
+    
+    peopleInput.addEventListener('change', updateSummary);
+    dateInput.addEventListener('input', updateSummary);
+    timeInput.addEventListener('change', updateSummary);
+
+    
+    updateSummary();
+    function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+
+        function closeSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+</script>
+
+
+</body>
+</html>

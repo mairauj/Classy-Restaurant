@@ -1,0 +1,3225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body{
+    min-height: 200vh;
+    width: 100%;
+    padding-top: 100px;
+       
+}
+
+
+header{
+    z-index: 999;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 20px;
+    transition: 0.5 ease;
+    background-color: rgba(73, 7, 7, 1);
+    margin-bottom: 20px;
+    height: 60px;
+    
+    
+}
+
+
+
+
+
+
+header .brand{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: auto;
+}
+
+.brand i{
+    padding: 15px;
+    font-size: xx-large;
+    margin-right: auto  ;
+
+}
+
+header .navigation{
+    position: relative;
+   
+   
+}
+
+header .navigation .navigation-items a{
+    position: relative;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3 ease;
+    
+}
+
+
+header .navigation .navigation-items a::before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+
+header .navigation .navigation-items a:hover:before{
+    width: 100%;
+}
+
+.navigation-items .fa-cart-shopping {
+    font-size: 20px;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navigation-items .fa-cart-shopping:hover {
+    color: #ff6347;
+}
+
+#cartCount {
+    color: #ffffff;
+ /* Adding background color to the cart count */
+    border-radius: 50%; /* To make it circular */
+    padding: 2px 6px; /* Adjust padding for better visibility */
+    position: relative; /* Needed for positioning the count */
+    top: -10px; /* Positioning the count slightly above the icon */
+    right: -10px; /* Positioning the count slightly to the right of the icon */
+    font-size: 0.8rem; /* Adjust the size for better fit */
+    display: inline-block; /* Keeping it inline with the cart icon */
+    line-height: 1; /* Aligning vertically */
+    text-align: center; /* Center aligning the count */
+}
+
+.menubtn{
+    display: none;
+}
+
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    display: none;
+   
+    
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+
+    
+}
+.sidebar .brand{
+    margin: 0 auto;
+    
+}
+
+.sidebar .navigation-items {
+    width: 100%;
+    height: 300px;
+    flex-direction: column;
+    display: flex;
+}
+
+.navigation-items a {
+    padding: 10px; 
+    color: #000000; 
+    text-decoration: none; 
+    font-weight: 500;
+}
+
+.img-container{
+    width: 100%;
+  
+    height: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+  
+}
+
+
+
+.img-container img {
+    width: 100%;
+    max-width: 1300px;
+    max-height: 400px;
+    border-radius: 5px;
+    /* border: 5px solid rgb(0, 0, 0); */
+    object-fit: cover; 
+    margin: auto; 
+}
+
+
+
+h1 {
+    font-size: x-large;
+    font-family: "Architects Daughter", cursive;
+    font-weight: bolder;
+    margin-left: 120px;
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+}
+
+
+#places {
+    margin-left: 120px;
+    display: block;
+    color: rgb(0, 0, 0);
+}
+
+#hours{
+    margin-left: 120px;
+    display: block;
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+/* //food */
+
+
+.food-menu {
+    width: calc(100% - 240px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 50px auto 0px auto;
+}
+
+.food-menu h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #590000;
+    font-size: 1.5em;
+    
+}
+.food-menu-container {
+    width:100%;
+    height: 400px;
+    /* border: 1px solid #000000; */
+    display: flex;
+    flex-wrap: wrap;
+    
+ 
+    margin-top: 30px;
+}
+
+.food-menu-container .dish-item {
+    width: 50%; 
+    height: auto;
+    box-sizing: border-box; 
+    padding: 10px; 
+    
+}
+
+
+.food-menu-container .dish-item .dishes{
+    display: flex;
+    justify-content: space-between;
+    border:1px solid rgb(203, 203, 203) ;
+
+
+}
+
+.food-menu .food-menu-container .dish-item .dishes:hover{
+    border:2px solid rgb(49, 48, 48);
+}
+
+
+.dishes .dish-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.food-menu-container .dish-item #dish-img {
+    width: 150px;
+    height: 150px;
+}
+
+.dish-name{
+    font-size: larger;
+    font-weight: bold;
+    
+}
+
+.dish-desc{
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 10px;
+
+
+}
+
+.dish-price{
+    color: rgb(212, 217, 222);
+
+}
+
+
+/* salad */
+
+
+.food-menu-salad {
+    width: calc(100% - 240px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 100px auto 0px auto;
+}
+.food-menu-salad h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #590000;
+    font-size: 1.5em;
+    
+}
+
+
+
+.food-menu-salad .food-menu-container {
+    width:100%;
+    height: 600px;
+    /* border: 1px solid #000000; */
+    display: flex;
+    flex-wrap: wrap;
+    
+ 
+    margin-top: 30px;
+}
+
+.food-menu-salad .food-menu-container .dish-item {
+    width: 50%; 
+    height:auto;
+    box-sizing: border-box; 
+    padding: 10px; 
+    
+}
+
+
+.food-menu-salad .food-menu-container .dish-item .dishes{
+    display: flex;
+    justify-content: space-between;
+    border:1px solid rgb(203, 203, 203) ;
+
+
+}
+
+.dishes .product{
+    position: relative;
+    margin-top: 10px;
+}
+.food-menu-salad .food-menu-container .dish-item .dishes:hover{
+    border:2px solid rgb(49, 48, 48);
+}
+
+
+.dishes .dish-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.food-menu-container .dish-item #dish-img {
+    width: 150px;
+    height: 150px;
+}
+
+.dish-name{
+    font-size: larger;
+    font-weight: bold;
+    
+}
+
+.dish-desc{
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 10px;
+
+
+}
+
+.dish-price{
+    color: rgb(212, 217, 222);
+
+}
+
+
+
+
+/* shellfish*/
+
+
+.food-menu-shellfish {
+    width: calc(100% - 240px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 150px auto 0px auto;
+}
+
+.food-menu-shellfish h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #590000;
+    font-size: 1.5em;
+    
+}
+
+
+
+.food-menu-shellfish.food-menu-container {
+    width:100%;
+    height: 400px;
+    /* border: 1px solid #000000; */
+    display: flex;
+    flex-wrap: wrap;
+    
+ 
+    margin-top: 30px;
+}
+
+.food-menu-shellfish .food-menu-container .dish-item {
+    width: 50%; 
+    height: auto;
+    box-sizing: border-box; 
+    padding: 10px; 
+    
+}
+
+
+.food-menu-shellfish .food-menu-container .dish-item .dishes{
+    display: flex;
+    justify-content: space-between;
+    border:1px solid rgb(203, 203, 203) ;
+
+
+}
+
+.food-menu-shellfish .food-menu-container .dish-item .dishes:hover{
+    border:2px solid rgb(49, 48, 48);
+}
+
+
+.dishes .dish-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.food-menu-container .dish-item #dish-img {
+    width: 150px;
+    height: 150px;
+}
+
+.dish-name{
+    font-size: larger;
+    font-weight: bold;
+    
+}
+
+.dish-desc{
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 10px;
+
+
+}
+
+.dish-price{
+    color: rgb(212, 217, 222);
+
+}
+
+
+
+
+
+
+/* wagyu*/
+
+
+.food-menu-wagyu {
+    width: calc(100% - 240px);
+    height:auto;
+    /* border: 2px solid #000000; */
+    margin: 150px auto 0px auto;
+}
+
+
+.food-menu-wagyu h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #590000;
+    font-size: 1.5em;
+    
+}
+
+
+
+.food-menu-wagyu .food-menu-container {
+    width:100%;
+    height: auto;
+    /* border: 1px solid #000000; */
+    display: flex;
+    flex-wrap: wrap;
+    
+ 
+    margin-top: 30px;
+}
+
+.food-menu-wagyu .food-menu-container .dish-item {
+    width: 50%; 
+    height: auto;
+    box-sizing: border-box; 
+    padding: 10px; 
+    
+}
+
+
+.food-menu-wagyu .food-menu-container .dish-item .dishes{
+    display: flex;
+    justify-content: space-between;
+    border:1px solid rgb(203, 203, 203) ;
+
+
+}
+
+.food-menu-wagyu .food-menu-container .dish-item .dishes:hover{
+    border:2px solid rgb(49, 48, 48);
+}
+
+
+.dishes .dish-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.food-menu-container .dish-item #dish-img {
+    width: 150px;
+    height: 150px;
+}
+
+.dish-name{
+    font-size: larger;
+    font-weight: bold;
+    
+}
+
+.dish-desc{
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 10px;
+
+
+}
+
+.dish-price{
+    color: rgb(33, 33, 33);
+
+}
+
+
+
+/* desserts*/
+
+
+.food-menu-desserts {
+    width: calc(100% - 240px);
+    height: auto;
+   
+    margin: 150px auto 300px auto;
+}
+
+
+
+
+.food-menu-desserts h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #590000;
+    font-size: 1.5em;
+    
+}
+
+
+
+.food-menu-desserts .food-menu-container {
+    width:100%;
+    height: 200px;
+
+    display: flex;
+    flex-wrap: wrap;
+    
+ 
+    margin-top: 30px;
+}
+
+.food-menu-desserts .food-menu-container .dish-item {
+    width: 50%; 
+    height: 200px;
+    box-sizing: border-box; 
+    padding: 10px; 
+    
+}
+
+
+.food-menu-desserts .food-menu-container .dish-item .dishes{
+    display: flex;
+    justify-content: space-between;
+    border:1px solid rgb(203, 203, 203) ;
+
+
+}
+
+.food-menu-desserts .food-menu-container .dish-item .dishes:hover{
+    border:2px solid rgb(49, 48, 48);
+}
+
+.dishes .dish-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.food-menu-container .dish-item #dish-img {
+    width: 150px;
+    height: 150px;
+}
+
+.dish-name{
+    font-size: larger;
+    font-weight: bold;
+    
+}
+
+.dish-desc{
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 10px;
+
+
+}
+
+.dish-price{
+    color: rgb(33, 33, 33);
+
+}
+
+.side-cart {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #590000;
+    color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1000;
+  
+
+  }
+  
+  .side-cart ul {
+    list-style: none;
+    
+    
+  }
+  
+  .side-cart li {
+    padding: 10px;
+    
+    border-bottom: 1px solid #ddd;
+    display: flex;  
+    align-items: center;  
+    
+  }
+
+  .side-cart li img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    
+  }
+
+  .side-cart p{
+    text-align: justify;
+    margin: 0;
+    margin-top: 10px;
+  }
+  
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .cart-header button {
+    background: #ffffff;
+    font-size: large;
+    width: 50px;
+    border: none;
+    color:#590000;
+    cursor: pointer;
+  }
+  
+  .cart-header button:hover{
+ 
+    transform: scale(1.1);
+  } 
+  /* Open Cart Button */
+  #openCartBtn {
+    
+   
+    padding: 20px;
+    background-color:transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+    
+   
+  }
+
+  /* Checkout Button  */
+#checkout {
+    padding: 12px 12px; 
+    color: #ddd;
+   background-color: rgb(87, 0, 0);
+    font-size: 16px; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-left: 30%;
+  
+    display: inline-block; 
+    text-align: center; 
+   
+    margin-top: 20px;
+  }
+
+  #checkout:hover{
+    background-color: #ddd;
+    color: #590000;
+  }
+  
+
+
+  
+/* reserve-order */
+
+.reserve-order{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:120px;
+    margin-top: 160px;
+    height: auto;
+   
+    width: 100%;
+    
+  
+
+}
+
+.reserve-table{
+    position: relative;
+}
+
+.reserve-table img{
+    width: 600px;
+    height: 500px;
+   
+
+}
+
+.reserve-table .reservation-box{
+    background-color: #feead8;
+    width: 400px;
+    height: 400px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+
+.order-online{
+    position: relative;
+}
+.order-online img{
+    width: 600px;
+  
+
+    height: 500px;
+}
+
+.order-online .order-box{
+    background-color: #feead8;
+    width: 400px;
+    height: 400px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.reservation-box-desc{
+    margin: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 70px;
+
+
+}
+
+
+.reservation-box-desc .reservation-head{
+    font-size: 2em;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-family: "Cormorant Garamond", serif;
+    color:  rgba(73, 7, 7, 1);
+    font-weight:bolder;
+}
+
+.reservation-box-desc hr{
+    width: 120px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    background-color: #545454;
+    position: relative;
+    margin-left: 40px;
+    height: 3px;
+}
+
+.reservation-box-desc .reservation-description{
+    font-size: 0.9em;
+    position: relative;
+ 
+    color: black;
+    margin: 20px 40px;
+    font-weight: 500;
+}
+
+.reservation-box-desc .reservation-link{
+    text-decoration: none;
+    color: #590000;
+    letter-spacing: 2px;
+    position: relative;
+    margin-left: 40px;
+    padding: 10px 5px;
+    background-color: #feead8;
+    width: 200px;
+    color: #590000;
+    border: 2px solid black;
+    text-align: center;
+}
+
+
+.reservation-box-desc a:hover{
+    background-color: #590000;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+.order-box-desc{
+    margin: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 70px;
+
+
+}
+
+
+.order-box-desc .order-head{
+    font-size: 2em;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-family: "Cormorant Garamond", serif;
+    color:  rgba(73, 7, 7, 1);
+    font-weight:bolder;
+}
+
+.order-box-desc hr{
+    width: 120px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    background-color: #545454;
+    position: relative;
+    margin-left: 40px;
+    height: 3px;
+}
+
+.order-box-desc .order-description{
+    font-size: 0.9em;
+    position: relative;
+ 
+    color: black;
+    margin: 20px 40px;
+    font-weight: 500;
+}
+
+.order-box-desc .order-link{
+    text-decoration: none;
+    color: #590000;
+    letter-spacing: 2px;
+    position: relative;
+    margin-left: 40px;
+    padding: 10px 5px;
+    background-color: #feead8;
+    width: 200px;
+    color: #590000;
+    border: 2px solid black;
+    text-align: center;
+}
+
+
+.order-box-desc a:hover{
+    background-color: #590000;
+    color: white;
+}
+
+
+
+/* footer */
+footer {
+    background-color: #420909;
+    color: #ffffff;
+    padding: 20px 0;
+    font-family: 'Arial', sans-serif;
+    margin: 200px 0 0 0;
+}
+
+.footer-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-container div {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+p {
+    margin: 5px 0;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.newsletter form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+
+.newsletter button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #ffffff;
+    color: #420909;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.footer-bottom a {
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+ 
+@media(min-width:1025px) and (max-width:1439px){
+    
+h1 {
+    font-size: x-large;
+    font-family: "Architects Daughter", cursive;
+    font-weight: bolder;
+    margin: 10px auto 0px auto;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+
+#burlington {
+    margin:auto;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+#hours{
+    margin: auto;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+
+
+/* //food */
+
+
+.food-menu {
+    width: calc(100% - 240px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 50px auto 0px auto;
+}
+
+.food-menu h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #590000;
+    font-size: 1.5em;
+    
+}
+.food-menu-container {
+    width:100%;
+    height: 400px;
+    /* border: 1px solid #000000; */
+    display: flex;
+    flex-wrap: wrap;
+    
+ 
+    margin-top: 30px;
+}
+
+.food-menu-container .dish-item {
+    width: 50%; 
+    height: auto;
+    box-sizing: border-box; 
+    padding: 10px; 
+    
+}
+
+
+.food-menu-container .dish-item .dishes{
+    display: flex;
+    justify-content: space-between;
+    border:1px solid rgb(203, 203, 203) ;
+
+
+}
+
+.food-menu .food-menu-container .dish-item .dishes:hover{
+    border:2px solid rgb(49, 48, 48);
+}
+
+
+.dishes .dish-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.food-menu-container .dish-item #dish-img {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+}
+
+.dish-name{
+    font-size: larger;
+    font-weight: bold;
+    
+}
+
+.dish-desc{
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 10px;
+
+
+}
+
+.dish-price{
+    color: rgb(212, 217, 222);
+    margin-bottom: 2px;
+    margin-top: 2px;
+
+}
+
+.dishes .product{
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+
+
+
+.reserve-order{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:60px;
+    margin-top: 160px;
+    height: auto;
+   
+    width: 100%;
+    
+  
+
+}
+
+.reserve-table{
+    position: relative;
+}
+
+.reserve-table img{
+    width: 480px;
+    height: 400px;
+   
+
+}
+
+.reserve-table .reservation-box{
+    background-color: #feead8;
+    width: 400px;
+    height: 400px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+
+.order-online{
+    position: relative;
+}
+.order-online img{
+    width: 480px;
+  
+
+    height: 400px;
+}
+
+.order-online .order-box{
+    background-color: #feead8;
+    width: 400px;
+    height: 400px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.reservation-box-desc{
+    margin: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 70px;
+
+
+}
+
+
+.reservation-box-desc .reservation-head{
+    font-size: 2em;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-family: "Cormorant Garamond", serif;
+    color:  rgba(73, 7, 7, 1);
+    font-weight:bolder;
+}
+
+.reservation-box-desc hr{
+    width: 120px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    background-color: #545454;
+    position: relative;
+    margin-left: 40px;
+    height: 3px;
+}
+
+.reservation-box-desc .reservation-description{
+    font-size: 0.9em;
+    position: relative;
+ 
+    color: black;
+    margin: 20px 40px;
+    font-weight: 500;
+}
+
+.reservation-box-desc .reservation-link{
+    text-decoration: none;
+    color: #590000;
+    letter-spacing: 2px;
+    position: relative;
+    margin-left: 40px;
+    padding: 10px 5px;
+    background-color: #feead8;
+    width: 200px;
+    color: #590000;
+    border: 2px solid black;
+    text-align: center;
+}
+
+
+.reservation-box-desc a:hover{
+    background-color: #590000;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+.order-box-desc{
+    margin: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 70px;
+
+
+}
+
+
+.order-box-desc .order-head{
+    font-size: 2em;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-family: "Cormorant Garamond", serif;
+    color:  rgba(73, 7, 7, 1);
+    font-weight:bolder;
+}
+
+.order-box-desc hr{
+    width: 120px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    background-color: #545454;
+    position: relative;
+    margin-left: 40px;
+    height: 3px;
+}
+
+.order-box-desc .order-description{
+    font-size: 0.9em;
+    position: relative;
+ 
+    color: black;
+    margin: 20px 40px;
+    font-weight: 500;
+}
+
+.order-box-desc .order-link{
+    text-decoration: none;
+    color: #590000;
+    letter-spacing: 2px;
+    position: relative;
+    margin-left: 40px;
+    padding: 10px 5px;
+    background-color: #feead8;
+    width: 200px;
+    color: #590000;
+    border: 2px solid black;
+    text-align: center;
+}
+
+
+.order-box-desc a:hover{
+    background-color: #590000;
+    color: white;
+}
+
+.newsletter input[type="email"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+
+
+
+}
+
+
+
+
+@media(min-width:801px) and (max-width:1024px){
+
+
+       
+    header{
+        z-index: 999;
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        display: flex;
+        justify-content:space-between;
+        gap: 10px;
+        align-items: center;
+        padding: 1px 20px;
+        transition: 0.5 ease;
+       
+        margin-bottom: 20px;
+        height: 70px;
+        
+        
+    }
+
+.menubtn svg {
+    width: 30px; 
+    height: 30px;
+    fill: white; /* Make sure the color is visible */
+}
+    header .brand{
+        color: #fff;
+        font-size: 0.8rem;
+        
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    
+    .brand i{
+        padding: 5px;
+        font-size: x-large;
+    
+    }
+
+    header {
+        padding: 1px 20px; 
+    }
+    
+    .hideOnMobile{
+        display: none;
+    }
+
+    .menubtn{
+        display: block;
+       
+    }
+
+       
+    .sidebar {
+        width: 100%;
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    
+
+.sidebar .brand{
+    margin: 0 auto;
+    
+}
+
+.sidebar .navigation-items {
+    width: 100%; 
+    height: 300px;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    font-size: 4vw;
+}
+
+.navigation-items a {
+    padding: 10px; 
+    color: #5c1111; 
+    text-decoration: none;
+    font-weight: 500;
+
+
+
+}
+.navigation-items .fa-cart-shopping {
+    font-size: 20px;
+    color: #590000;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navigation-items .fa-cart-shopping:hover {
+    color: #ff6347;
+}
+
+
+#cartCount {
+    color: #590000;
+    
+ 
+}
+
+
+
+
+
+        
+h1 {
+    font-size: x-large;
+    font-family: "Architects Daughter", cursive;
+    font-weight: bolder;
+    margin: 10px auto 0px auto;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+
+#places {
+    margin:auto;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+#hours{
+    margin: auto;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+
+
+/* //food */
+
+
+.food-menu {
+    width: calc(100% - 140px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 50px auto 0px auto;
+}
+
+.food-menu-desserts {
+    width: calc(100% - 140px);
+    height: auto;
+   
+    margin: 150px auto 300px auto;
+}
+
+.food-menu-wagyu {
+    width: calc(100% - 140px);
+    height:auto;
+    /* border: 2px solid #000000; */
+    margin: 150px auto 0px auto;
+}
+.food-menu-shellfish {
+    width: calc(100% - 140px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 150px auto 0px auto;
+}
+.food-menu-salad {
+    width: calc(100% - 140px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 100px auto 0px auto;
+}
+
+.food-menu h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #590000;
+    font-size: 1.5em;
+    
+}
+.food-menu-container {
+    width:100%;
+    height: 400px;
+    /* border: 1px solid #000000; */
+    display: flex;
+    flex-wrap: wrap;
+    
+ 
+    margin-top: 30px;
+}
+
+.food-menu-container .dish-item {
+    width: 50%; 
+    height: auto;
+    box-sizing: border-box; 
+    padding: 10px; 
+    
+}
+
+
+.food-menu-container .dish-item .dishes{
+    display: flex;
+    justify-content: space-between;
+    border:1px solid rgb(203, 203, 203) ;
+
+
+}
+
+.food-menu .food-menu-container .dish-item .dishes:hover{
+    border:2px solid rgb(49, 48, 48);
+}
+
+
+.dishes .dish-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.food-menu-container .dish-item #dish-img {
+    width: 120px;
+    height: auto;
+    
+}
+
+.dish-name{
+    font-size: large;
+    font-weight: bold;
+    
+}
+
+.dish-desc{
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 10px;
+
+
+}
+
+.dish-price{
+    color: rgb(0, 0, 0);
+    margin-bottom: 2px;
+    margin-top: 2px;
+
+}
+
+.dishes .product{
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+
+
+
+.reserve-order{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:60px;
+    margin-top: 160px;
+    height: auto;
+   
+    width: 100%;
+    
+  
+
+}
+
+.reserve-table{
+    position: relative;
+}
+
+.reserve-table img{
+    width: 480px;
+    height: 400px;
+   
+
+}
+
+.reserve-table .reservation-box{
+    background-color: #feead8;
+    width: 400px;
+    height: 400px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+
+.order-online{
+    position: relative;
+}
+.order-online img{
+    width: 480px;
+  
+
+    height: 400px;
+}
+
+.order-online .order-box{
+    background-color: #feead8;
+    width: 400px;
+    height: 400px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.reservation-box-desc{
+    margin: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 70px;
+
+
+}
+
+
+.reservation-box-desc .reservation-head{
+    font-size: 2em;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-family: "Cormorant Garamond", serif;
+    color:  rgba(73, 7, 7, 1);
+    font-weight:bolder;
+}
+
+.reservation-box-desc hr{
+    width: 120px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    background-color: #545454;
+    position: relative;
+    margin-left: 40px;
+    height: 3px;
+}
+
+.reservation-box-desc .reservation-description{
+    font-size: 0.9em;
+    position: relative;
+ 
+    color: black;
+    margin: 20px 40px;
+    font-weight: 500;
+}
+
+.reservation-box-desc .reservation-link{
+    text-decoration: none;
+    color: #590000;
+    letter-spacing: 2px;
+    position: relative;
+    margin-left: 40px;
+    padding: 10px 5px;
+    background-color: #feead8;
+    width: 200px;
+    color: #590000;
+    border: 2px solid black;
+    text-align: center;
+}
+
+
+.reservation-box-desc a:hover{
+    background-color: #590000;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+.order-box-desc{
+    margin: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 70px;
+
+
+}
+
+
+.order-box-desc .order-head{
+    font-size: 2em;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-family: "Cormorant Garamond", serif;
+    color:  rgba(73, 7, 7, 1);
+    font-weight:bolder;
+}
+
+.order-box-desc hr{
+    width: 120px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    background-color: #545454;
+    position: relative;
+    margin-left: 40px;
+    height: 3px;
+}
+
+.order-box-desc .order-description{
+    font-size: 0.9em;
+    position: relative;
+ 
+    color: black;
+    margin: 20px 40px;
+    font-weight: 500;
+}
+
+.order-box-desc .order-link{
+    text-decoration: none;
+    color: #590000;
+    letter-spacing: 2px;
+    position: relative;
+    margin-left: 40px;
+    padding: 10px 5px;
+    background-color: #feead8;
+    width: 200px;
+    color: #590000;
+    border: 2px solid black;
+    text-align: center;
+}
+
+
+.order-box-desc a:hover{
+    background-color: #590000;
+    color: white;
+}
+
+.newsletter input[type="email"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+
+
+    
+    /* reserve-order */
+    
+    .reserve-order{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:180px;
+        margin-top: 160px;
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 20px;
+    
+        width: 100%;
+        
+      
+    
+    }
+    
+    .reserve-table{
+        position: relative;
+    }
+    
+    .reserve-table img{
+        width: 600px;
+        height: 500px;
+       
+    
+    }
+    
+    .reserve-table .reservation-box{
+        background-color: #feead8;
+        width: 400px;
+        height: 400px;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+    
+    
+    .order-online{
+        position: relative;
+    }
+    .order-online img{
+        width: 600px;
+      
+    
+        height: 500px;
+    }
+    
+    .order-online .order-box{
+        background-color: #feead8;
+        width: 400px;
+        height: 400px;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+    
+    .reservation-box-desc{
+        margin: 20px;
+        display: flex;
+        
+        flex-direction: column;
+        width: 400px;
+        height: auto;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 70px;
+    
+    
+    }
+    
+    
+    .reservation-box-desc .reservation-head{
+        font-size: 2em;
+        position: relative;
+        margin-top: 40px;
+        margin-left: 40px;
+        font-family: "Cormorant Garamond", serif;
+        color:  rgba(73, 7, 7, 1);
+        font-weight:bolder;
+    }
+    
+    .reservation-box-desc hr{
+        width: 120px;
+        margin-top: 1px;
+        margin-bottom: 10px;
+        background-color: #545454;
+        position: relative;
+        margin-left: 40px;
+        height: 3px;
+    }
+    
+    .reservation-box-desc .reservation-description{
+        font-size: 0.9em;
+        position: relative;
+     
+        color: black;
+        margin: 20px 40px;
+        font-weight: 500;
+    }
+    
+    .reservation-box-desc .reservation-link{
+        text-decoration: none;
+        color: #590000;
+        letter-spacing: 2px;
+        position: relative;
+        margin-left: 40px;
+        padding: 10px 5px;
+        background-color: #feead8;
+        width: 200px;
+        color: #590000;
+        border: 2px solid black;
+        text-align: center;
+    }
+    
+    
+    .reservation-box-desc a:hover{
+        background-color: #590000;
+        color: white;
+    }
+    
+    
+     
+    
+    
+    .order-box-desc{
+        margin: 20px;
+        display: flex;
+        
+        flex-direction: column;
+        width: 400px;
+        height: auto;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 70px;
+    
+    
+    }
+    
+    
+    .order-box-desc .order-head{
+        font-size: 2em;
+        position: relative;
+        margin-top: 40px;
+        margin-left: 40px;
+        font-family: "Cormorant Garamond", serif;
+        color:  rgba(73, 7, 7, 1);
+        font-weight:bolder;
+    }
+    
+    .order-box-desc hr{
+        width: 120px;
+        margin-top: 1px;
+        margin-bottom: 10px;
+        background-color: #545454;
+        position: relative;
+        margin-left: 40px;
+        height: 3px;
+    }
+    
+    .order-box-desc .order-description{
+        font-size: 0.9em;
+        position: relative;
+     
+        color: black;
+        margin: 20px 40px;
+        font-weight: 500;
+    }
+    
+    .order-box-desc .order-link{
+        text-decoration: none;
+        color: #590000;
+        letter-spacing: 2px;
+        position: relative;
+        margin-left: 40px;
+        padding: 10px 5px;
+        background-color: #feead8;
+        width: 200px;
+        color: #590000;
+        border: 2px solid black;
+        text-align: center;
+    }
+    
+    
+    .order-box-desc a:hover{
+        background-color: #590000;
+        color: white;
+    }
+    
+
+    
+.newsletter input[type="email"] {
+    padding: 1px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+
+
+    
+}
+
+
+
+
+@media(max-width:800px){
+
+
+       
+    header{
+        z-index: 999;
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        display: flex;
+        justify-content:space-between;
+        gap: 10px;
+        align-items: center;
+        padding: 1px 20px;
+        transition: 0.5 ease;
+       
+        margin-bottom: 20px;
+        height: 70px;
+        
+        
+    }
+
+.menubtn svg {
+    width: 30px; 
+    height: 30px;
+    fill: white; /* Make sure the color is visible */
+}
+    header .brand{
+        color: #fff;
+        font-size: 0.8rem;
+        
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    
+    .brand i{
+        padding: 5px;
+        font-size: x-large;
+    
+    }
+
+    header {
+        padding: 1px 20px; 
+    }
+    
+    .hideOnMobile{
+        display: none;
+    }
+
+    .menubtn{
+        display: block;
+       
+    }
+
+       
+    .sidebar {
+        width: 100%;
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    
+
+.sidebar .brand{
+    margin: 0 auto;
+    
+}
+
+.sidebar .navigation-items {
+    width: 100%; 
+    height: 300px;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    font-size: 4vw;
+}
+
+.navigation-items a {
+    padding: 10px; 
+    color: #5c1111; 
+    text-decoration: none;
+    font-weight: 500;
+
+
+
+}
+.navigation-items .fa-cart-shopping {
+    font-size: 20px;
+    color: #590000;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navigation-items .fa-cart-shopping:hover {
+    color: #ff6347;
+}
+
+#cartCount{
+    color: #590000;
+}
+
+
+       
+h1 {
+    font-size: x-large;
+    font-family: "Architects Daughter", cursive;
+    font-weight: bolder;
+    margin: 10px auto 0px auto;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+
+#places {
+    margin:auto;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+#hours{
+    margin: auto;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+
+
+/* //food */
+
+
+.food-menu {
+    width: calc(100% - 10px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 50px auto 0px auto;
+}
+
+.food-menu-desserts {
+    width: calc(100% - 10px);
+    height: auto;
+   
+    margin: 150px auto 300px auto;
+}
+
+.food-menu-wagyu {
+    width: calc(100% - 10px);
+    height:auto;
+    /* border: 2px solid #000000; */
+    margin: 150px auto 0px auto;
+}
+.food-menu-shellfish {
+    width: calc(100% - 10px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 150px auto 0px auto;
+}
+.food-menu-salad {
+    width: calc(100% - 10px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 100px auto 0px auto;
+}
+
+.food-menu h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #590000;
+    font-size: 1.5em;
+    
+}
+.food-menu-container {
+    width:100%;
+    height: 400px;
+    /* border: 1px solid #000000; */
+    display: flex;
+    flex-wrap: wrap;
+    
+ 
+    margin-top: 30px;
+}
+
+.food-menu-container .dish-item {
+    width: 50%; 
+    height: auto;
+    box-sizing: border-box; 
+    padding: 10px; 
+    
+}
+
+
+.food-menu-container .dish-item .dishes{
+    display: flex;
+    justify-content: space-between;
+    border:1px solid rgb(203, 203, 203) ;
+
+
+}
+
+.food-menu .food-menu-container .dish-item .dishes:hover{
+    border:2px solid rgb(49, 48, 48);
+}
+
+
+.dishes .dish-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.food-menu-container .dish-item #dish-img {
+    width: 120px;
+    height: 120px;
+    
+}
+
+.dish-name{
+    font-size: larger;
+    font-weight: bold;
+    
+}
+
+.dish-desc{
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 10px;
+
+
+}
+
+.dish-price{
+    color: rgb(0, 0, 0);
+    margin-bottom: 2px;
+    margin-top: 2px;
+
+}
+
+.dishes .product{
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+
+
+
+
+/* reserve-order */
+
+.reserve-order{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:180px;
+    margin-top: 160px;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 20px;
+
+    width: 100%;
+    
+  
+
+}
+
+.reserve-table{
+    position: relative;
+}
+
+.reserve-table img{
+    width: 600px;
+    height: 500px;
+   
+
+}
+
+.reserve-table .reservation-box{
+    background-color: #feead8;
+    width: 400px;
+    height: 400px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+
+.order-online{
+    position: relative;
+}
+.order-online img{
+    width: 600px;
+  
+
+    height: 500px;
+}
+
+.order-online .order-box{
+    background-color: #feead8;
+    width: 400px;
+    height: 400px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.reservation-box-desc{
+    margin: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 70px;
+
+
+}
+
+
+.reservation-box-desc .reservation-head{
+    font-size: 2em;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-family: "Cormorant Garamond", serif;
+    color:  rgba(73, 7, 7, 1);
+    font-weight:bolder;
+}
+
+.reservation-box-desc hr{
+    width: 120px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    background-color: #545454;
+    position: relative;
+    margin-left: 40px;
+    height: 3px;
+}
+
+.reservation-box-desc .reservation-description{
+    font-size: 0.9em;
+    position: relative;
+ 
+    color: black;
+    margin: 20px 40px;
+    font-weight: 500;
+}
+
+.reservation-box-desc .reservation-link{
+    text-decoration: none;
+    color: #590000;
+    letter-spacing: 2px;
+    position: relative;
+    margin-left: 40px;
+    padding: 10px 5px;
+    background-color: #feead8;
+    width: 200px;
+    color: #590000;
+    border: 2px solid black;
+    text-align: center;
+}
+
+
+.reservation-box-desc a:hover{
+    background-color: #590000;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+.order-box-desc{
+    margin: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 70px;
+
+
+}
+
+
+.order-box-desc .order-head{
+    font-size: 2em;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-family: "Cormorant Garamond", serif;
+    color:  rgba(73, 7, 7, 1);
+    font-weight:bolder;
+}
+
+.order-box-desc hr{
+    width: 120px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    background-color: #545454;
+    position: relative;
+    margin-left: 40px;
+    height: 3px;
+}
+
+.order-box-desc .order-description{
+    font-size: 0.9em;
+    position: relative;
+ 
+    color: black;
+    margin: 20px 40px;
+    font-weight: 500;
+}
+
+.order-box-desc .order-link{
+    text-decoration: none;
+    color: #590000;
+    letter-spacing: 2px;
+    position: relative;
+    margin-left: 40px;
+    padding: 10px 5px;
+    background-color: #feead8;
+    width: 200px;
+    color: #590000;
+    border: 2px solid black;
+    text-align: center;
+}
+
+
+.order-box-desc a:hover{
+    background-color: #590000;
+    color: white;
+}
+
+
+
+
+
+}
+
+
+@media (min-width:401px) and (max-width:600px){
+
+
+
+
+.food-menu {
+    width: calc(100% - 10px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 50px auto 0px auto;
+}
+
+.food-menu-desserts {
+    width: calc(100% - 10px);
+    height: auto;
+   
+    margin: 150px auto 300px auto;
+}
+
+.food-menu-wagyu {
+    width: calc(100% - 10px);
+    height:auto;
+    /* border: 2px solid #000000; */
+    margin: 150px auto 0px auto;
+}
+.food-menu-shellfish {
+    width: calc(100% - 10px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 150px auto 0px auto;
+}
+.food-menu-salad {
+    width: calc(100% - 10px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 100px auto 0px auto;
+}
+
+.food-menu h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #590000;
+    font-size: 1.5em;
+    
+}
+.food-menu-container {
+    width:100%;
+    height: auto;
+    /* border: 1px solid #000000; */
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap;
+    
+ 
+    margin-top: 30px;
+}
+
+
+.food-menu-container .dish-item {
+    width: 100%; 
+    height: auto;
+    box-sizing: border-box; 
+    padding: 20px; 
+    
+}
+.food-menu-salad .food-menu-container,.food-menu-shellfish .food-menu-container, .food-menu-desserts .food-menu-container{
+    width:100%;
+    height: auto;
+    /* border: 1px solid #000000; */
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap;
+    
+ 
+    margin-top: 30px;
+}
+
+.food-menu-salad .food-menu-container .dish-item,.food-menu-shellfish .food-menu-container .dish-item, .food-menu-desserts .food-menu-container .dish-item{
+    width: 100%; 
+    height: auto;
+    box-sizing: border-box; 
+    padding: 20px; 
+
+}
+
+
+
+
+
+
+.food-menu-container .dish-item .dishes{
+    display: flex;
+    justify-content: space-between;
+    border:1px solid rgb(203, 203, 203) ;
+
+
+}
+
+.food-menu .food-menu-container .dish-item .dishes:hover{
+    border:2px solid rgb(49, 48, 48);
+}
+
+
+.dishes .dish-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.food-menu-container .dish-item #dish-img {
+    width: 120px;
+    height: 120px;
+    
+}
+
+.dish-name{
+    font-size: 0.9em;
+    padding-right: 50px;
+    font-weight: bold;
+    
+}
+
+.dish-desc{
+    display: none;
+
+
+}
+
+.dish-price{
+    color: rgb(0, 0, 0);
+    margin-bottom: 2px;
+    margin-top: 2px;
+
+}
+
+.dishes .product{
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+
+
+/* reserve-order */
+
+.reserve-order{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:280px;
+    margin-top: 160px;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 20px;
+
+    width: 100%;
+    
+  
+
+}
+
+.reserve-table{
+    position: relative;
+}
+
+.reserve-table img{
+    width: 400px;
+    height: 300px;
+   
+
+}
+
+.reserve-table .reservation-box{
+    background-color: #feead8;
+    width: 340px;
+    height: 320px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+
+.order-online{
+    position: relative;
+}
+.order-online img{
+    width: 400px;
+  
+
+    height: 300px;
+}
+
+.order-online .order-box{
+    background-color: #feead8;
+    width: 340px;
+    height: 320px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.reservation-box-desc{
+    margin: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    width: 340px;
+    height: auto;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 70px;
+
+
+}
+
+
+.reservation-box-desc .reservation-head{
+    font-size: 1.5em;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 10px;
+    font-family: "Cormorant Garamond", serif;
+    color:  rgba(73, 7, 7, 1);
+    font-weight:bolder;
+}
+
+.reservation-box-desc hr{
+    width: 120px;
+    margin-top: 1px;
+    margin-bottom: 0px;
+    background-color: #545454;
+    position: relative;
+    margin-left: 10px;
+    height: 3px;
+}
+
+.reservation-box-desc .reservation-description{
+    font-size: 0.7em;
+    width: 100%;
+    padding-right: 20px;
+    position: relative;
+ 
+    color: black;
+    margin: 0px 5px;
+    font-weight: 500;
+}
+
+.reservation-box-desc .reservation-link{
+    text-decoration: none;
+    color: #590000;
+    letter-spacing: 2px;
+    position: relative;
+    margin-left: 10px;
+    padding: 10px 5px;
+    background-color: #feead8;
+    width: 200px;
+    color: #590000;
+    border: 2px solid black;
+    text-align: center;
+}
+
+
+.reservation-box-desc a:hover{
+    background-color: #590000;
+    color: white;
+}
+
+
+.order-box-desc{
+    margin: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    width: 340px;
+    height: auto;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 70px;
+
+
+}
+
+
+.order-box-desc .order-head{
+    font-size: 1.5em;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 10px;
+    font-family: "Cormorant Garamond", serif;
+    color:  rgba(73, 7, 7, 1);
+    font-weight:bolder;
+}
+
+.order-box-desc hr{
+    width: 120px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    background-color: #545454;
+    position: relative;
+    margin-left: 10px;
+    height: 3px;
+}
+
+.order-box-desc .order-description{
+    font-size: 0.9em;
+    position: relative;
+ 
+    color: black;
+    margin: 0px 10px;
+    font-weight: 500;
+}
+
+.order-box-desc .order-link{
+    text-decoration: none;
+    color: #590000;
+    letter-spacing: 2px;
+    position: relative;
+    margin-left: 10px;
+    padding: 10px 5px;
+    background-color: #feead8;
+    width: 200px;
+    color: #590000;
+    border: 2px solid black;
+    text-align: center;
+}
+
+
+.order-box-desc a:hover{
+    background-color: #590000;
+    color: white;
+}
+
+
+
+
+.newsletter input[type="email"] {
+    padding: 5px;
+    border: none;
+    width: 100%;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+.food-menu-desserts{
+    margin-bottom: 60px;
+}
+
+
+
+}
+
+@media (max-width:400px){
+    
+
+.food-menu {
+    width: calc(100% - 10px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 50px auto 0px auto;
+}
+
+.food-menu-desserts {
+    width: calc(100% - 10px);
+    height: auto;
+   
+    margin: 50px auto 50px auto;
+}
+
+.food-menu-wagyu {
+    width: calc(100% - 10px);
+    height:auto;
+    /* border: 2px solid #000000; */
+    margin: 50px auto 0px auto;
+}
+.food-menu-shellfish {
+    width: calc(100% - 10px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 50px auto 0px auto;
+}
+.food-menu-salad {
+    width: calc(100% - 10px);
+    height: auto;
+    /* border: 2px solid #000000; */
+    margin: 50px auto 0px auto;
+}
+
+.food-menu h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #590000;
+    font-size: 1.5em;
+    
+}
+.food-menu-container {
+    width:100%;
+    height: auto;
+    /* border: 1px solid #000000; */
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap;
+    
+ 
+    margin-top: 30px;
+}
+
+
+.food-menu-container .dish-item {
+    width: 100%; 
+    height: auto;
+    box-sizing: border-box; 
+    padding: 20px; 
+    
+}
+.food-menu-salad .food-menu-container,.food-menu-shellfish .food-menu-container, .food-menu-desserts .food-menu-container{
+    width:100%;
+    height: auto;
+    /* border: 1px solid #000000; */
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap;
+    
+ 
+    margin-top: 30px;
+}
+
+.food-menu-salad .food-menu-container .dish-item,.food-menu-shellfish .food-menu-container .dish-item, .food-menu-desserts .food-menu-container .dish-item{
+    width: 100%; 
+    height: auto;
+    box-sizing: border-box; 
+    padding: 20px; 
+
+}
+
+
+
+
+
+
+.food-menu-container .dish-item .dishes{
+    display: flex;
+    justify-content: space-between;
+    border:1px solid rgb(203, 203, 203) ;
+
+
+}
+
+.food-menu .food-menu-container .dish-item .dishes:hover{
+    border:2px solid rgb(49, 48, 48);
+}
+
+
+.dishes .dish-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.food-menu-container .dish-item #dish-img {
+    width: 120px;
+    height: 120px;
+    
+}
+
+.dish-name{
+    font-size: 0.9em;
+    padding-right: 50px;
+    font-weight: bold;
+    
+}
+
+.dish-desc{
+    display: none;
+
+
+}
+
+.dish-price{
+    color: rgb(0, 0, 0);
+    margin-bottom: 2px;
+    margin-top: 2px;
+
+}
+
+.dishes .product{
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+.img-container{
+    width: 100%;
+  
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+  
+}
+
+
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    border-radius: 5px;
+    /* border: 5px solid rgb(0, 0, 0); */
+    object-fit: cover; 
+    
+}
+
+
+
+/* reserve-order */
+
+.reserve-order{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:280px;
+    margin-top: 160px;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 20px;
+
+    width: 100%;
+    
+  
+
+}
+
+.reserve-table{
+    position: relative;
+}
+
+.reserve-table img {
+    width: calc(100% - 20px); /* Reduces width to account for margins */
+    height: auto;
+    margin: 0 10px; /* Adds 10px margin to the left and right */
+}
+.reserve-table .reservation-box{
+    background-color: #feead8;
+    width: calc(100% - 60px);
+    height: auto;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+
+.order-online{
+    position: relative;
+}
+.order-online img{
+    width: calc(100% - 20px); 
+    margin: 0 10px;
+
+    height:auto;
+}
+
+.order-online .order-box{
+    background-color: #feead8;
+    
+    height: auto;
+    position:absolute;
+    width: calc(100% - 60px);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.reservation-box-desc{
+    margin: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    width: 240px;
+    height: auto;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 70px;
+
+
+}
+
+
+.reservation-box-desc .reservation-head{
+    font-size: 1.5em;
+    position: relative;
+    width: calc(100% - 20px);
+    margin-top: 40px;
+        
+    font-family: "Cormorant Garamond", serif;
+    color:  rgba(73, 7, 7, 1);
+    font-weight:bolder;
+    margin-left: 0px;
+}
+
+.reservation-box-desc hr{
+    width: 120px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    background-color: #545454;
+    position: relative;
+    
+    height: 3px;
+}
+
+.reservation-box-desc .reservation-description{
+    font-size: 0.7em;
+    width: 100%;
+    padding-right: 20px;
+    position: relative;
+    text-align: left;
+    color: black;
+    margin: 0px 5px;
+    font-weight: 500;
+}
+
+.reservation-box-desc .reservation-link{
+    text-decoration: none;
+    color: #590000;
+    letter-spacing: 1px;
+    font-size: 1em;
+    position: relative;
+    margin-left: 10px;
+    padding: 8px 4px;
+    background-color: #feead8;
+    width: 180px;
+    color: #590000;
+    border: 2px solid black;
+    text-align: center;
+}
+
+
+
+.reservation-box-desc a:hover{
+    background-color: #590000;
+    color: white;
+}
+
+
+.order-box-desc{
+    margin: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    width: 240px;
+    height: auto;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 90px;
+
+
+}
+
+
+.order-box-desc .order-head{
+    font-size: 1vw;
+    position: relative;
+    margin-top: 40px;
+    width: 100%;
+    margin-left: 0px;
+    font-family: "Cormorant Garamond", serif;
+    color:  rgba(73, 7, 7, 1);
+    font-weight:bolder;
+}
+
+.order-box-desc hr{
+    width: 120px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    background-color: #545454;
+    position: relative;
+    margin-left: 10px;
+    height: 3px;
+}
+
+.order-box-desc .order-description{
+    font-size: 0.7em;
+    position: relative;
+    text-align: left; 
+    color: black;
+    margin: 0px 10px;
+    font-weight: 500;
+}
+
+.order-box-desc .order-link{
+    text-decoration: none;
+    color: #590000;
+    letter-spacing: 2px;
+    position: relative;
+    margin-left: 10px;
+    padding: 8px 4px;
+    background-color: #feead8;
+    width: 200px;
+    color: #590000;
+    border: 2px solid black;
+    text-align: center;
+}
+
+
+.order-box-desc a:hover{
+    background-color: #590000;
+    color: white;
+}
+
+
+
+.newsletter input[type="email"] {
+    padding: 5px;
+    border: none;
+    width: 100%;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+
+
+.newsletter input[type="email"] {
+    padding: 5px;
+    border: none;
+    width: 100%;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+footer {
+    background-color: #420909;
+    color: #ffffff;
+    padding: 20px 0;
+    font-family: 'Arial', sans-serif;
+    margin: 300px 0 0 0;
+}
+
+}

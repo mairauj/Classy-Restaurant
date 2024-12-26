@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="order.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./Images/crown2.png">
+
+</head>
+<body>
+
+    <header>
+        <div class="sidebar">
+            <a href="index.html" class="brand"><i class="fa-regular fa-chess-king"></i>King'<span style="color: red;">s</span> Banquet </a>
+            <div class="menu-btn"></div>
+            <div class="navigation-items">
+                <a href="#"  onclick="closeSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="30px" fill="black" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+                <a href="index.html">Home</a>
+                <a href="about us.html">About</a>
+                <a href="location.html">Locations</a>
+                <a href="menu.html">Menu</a>
+                <a href="reservation.html">Reservation</a>
+            </div>
+        </div>
+            
+       
+
+        <a href="index.html" class="brand"><i class="fa-regular fa-chess-king"></i>King'<span style="color: red;">s</span> Banquet </a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html" class="hideOnMobile">Home</a>
+                <a href="about us.html" class="hideOnMobile">About</a>
+                <a href="location.html" class="hideOnMobile">Locations</a>
+                <a href="menu.html" class="hideOnMobile">Menu</a>
+                <a href="reservation.html" class="hideOnMobile">Reservation</a>
+                <a href="#" onclick="showSidebar()" class="menubtn"><svg xmlns="http://www.w3.org/2000/svg" height="26px" fill="white" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="heading">ORDER ONLINE</div>
+
+    <div class="section-food">
+        <div class="description">
+            <h2 id="text">Every Meal Should Be a Celebration</h2>
+            <h1 id="text2">Royal<br /><span>FEAST</span></h1>
+        </div>
+        <div class="image-container">
+            <img src="Images/img3.png" id="food">
+            <img src="Images/spoon and fork-Photoroom.png" id="spoon">
+            <img src="Images/knife-png-27811-Photoroom.png" id="knife">
+        </div>
+    </div>
+
+
+
+
+    <div class="para-container">
+    <div class="paragraph">
+
+        <p>
+            Enjoy the classic King's Banquet experience, delivered to your home. Let us take care of tonight’s dinner.
+        </p>
+
+
+    </div>
+    </div>
+
+
+    <div class="to-go">
+        <div class="to-go-img-container">
+        <img src="Images/to-go.jpg">
+        <div class="to-go-text">TO-GO</div>
+
+        </div>
+        <div class="to-go-desc">
+            <h3  class="to-go-head">Browse Our Menu for Local Delivery Options!</h3>
+                <hr>
+        <ul class="to-go-description"><li>Full menu options available with easy online ordering & prepayment via credit card.</li>
+            <li>Convenient pickup & local delivery from our kitchen to your home.</li>
+        </ul>
+        <div class="city-selection">
+            <select id="city-dropdown">
+              <option value="" disabled selected>Select Your City</option>
+              <option value="boston">Boston</option>
+              <option value="burlington">Burlington</option>
+              <option value="chicago">Chicago</option>
+              <option value="las-vegas">Las Vegas</option>
+              <option value="miami-beach">Miami Beach</option>
+              <option value="wellesley">Wellesley</option>
+            </select>
+          
+            <button id="order-now" onclick="orderNow()">Order Now</button>
+          </div>
+          
+          <p id="selected-city"></p>
+        
+      
+        </div>
+    </div>
+    
+
+    <!-- footer -->
+
+<footer>
+    <div class="footer-container">
+        <div class="contact-info">
+            <h3>Contact Us</h3>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@kingsbanquet.com</p>
+            <p>Address: 123 Main St, City, State, ZIP</p>
+        </div>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <a href="menu.html">Menu</a>
+            <a href="#">Reservations</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 King's Banquet. All rights reserved.</p>
+       
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+  let food = document.getElementById('food');
+let text = document.getElementById('text');
+let textnew = document.getElementById('text2')
+
+window.addEventListener('scroll', function() {
+    let value = window.scrollY;
+
+    if (value >= 0) {
+        food.style.top = (100-value * 0.5) + 'px';
+       
+        text.style.transform = `translateX(${value * -0.2}px)`;
+        textnew.style.transform = `translateX(${value * -0.2}px)`;
+    } else {
+       
+        food.style.left = '300px'; 
+        text.style.transform = 'translateX(0)';
+        textnew.style.transform = 'translateX(0)'
+    }
+});
+
+function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+
+        function closeSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+
+    </script>
+</body>
+</html>
+
+
